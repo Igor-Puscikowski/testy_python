@@ -19,7 +19,9 @@ class TestBank(unittest.TestCase):
         acc2 = Bank("kuba", "kowal", 12345678901)
         self.assertEqual(acc2.pesel, "pesel poprawny")
 
-
+    def test_prom_code(self):
+        acc4 = Bank("kuba", "kowal", 12345678901, bonus ="PROM_XY3Z")
+        self.assertEqual(acc4.balance,50)
 
 
 if __name__ == '__main__':
