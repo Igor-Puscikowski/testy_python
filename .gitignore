@@ -1,0 +1,12 @@
+# Ignorowanie wirtualnego środowiska
+.venv/
+
+# Ignorowanie konfiguracji PyCharm
+.idea/
+
+# Ignorowanie plików cache Pythona
+__pycache__/
+
+# Ignorowanie plików zależności systemowych
+*.pyc
+*.pyo
