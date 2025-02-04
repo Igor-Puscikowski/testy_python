@@ -19,9 +19,14 @@ class TestBank(unittest.TestCase):
         acc2 = Bank("kuba", "kowal", 12345678901)
         self.assertEqual(acc2.pesel, "pesel poprawny")
 
-    def test_prom_code(self):
-        acc4 = Bank("kuba", "kowal", 12345678901, bonus ="PROM_XY3Z")
-        self.assertEqual(acc4.balance,50)
+    def test_age_birth_after_60(self):
+        acc5 = Bank("kuba", "kowal", 65345678901, bonus="PROM_XY3Z9")
+        self.assertEqual(acc5.balance, 50)
+    def test_age_birth_before_60(self):
+        acc5 = Bank("kuba", "kowal", 55345678901, bonus="PROM_XY3Z9")
+        self.assertEqual(acc5.balance, 50)
+        """za stary"""
+
 
 
 if __name__ == '__main__':
